@@ -1,0 +1,12 @@
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/_setup_util.py
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/env.sh
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/setup.bash
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/setup.sh
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/setup.zsh
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/.rosinstall
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/etc/catkin/profile.d/05.catkin_make.bash
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/etc/catkin/profile.d/05.catkin_make_isolated.bash
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/lib/pkgconfig/beginner_tutorials.pc
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/share/beginner_tutorials/cmake/beginner_tutorialsConfig.cmake
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/share/beginner_tutorials/cmake/beginner_tutorialsConfig-version.cmake
+/home/krajcovic/workspace/sources/ros/catkin_ws/install/share/beginner_tutorials/package.xml
