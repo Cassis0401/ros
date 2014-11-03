@@ -1,0 +1,8 @@
+prefix=/home/krajcovic/workspace/sources/ros/catkin_ws/devel
+
+Name: test01
+Description: Description of test01
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/krajcovic/workspace/sources/ros/catkin_ws/devel/lib 
+Requires: 
