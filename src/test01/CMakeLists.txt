@@ -54,7 +54,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
  add_message_files(
    FILES
-   default_msg.msg
+   #default_msg.msg
    Num.msg
  )
 
@@ -64,6 +64,11 @@ find_package(catkin REQUIRED COMPONENTS
 #   Service1.srv
 #   Service2.srv
 # )
+ add_service_files(
+   FILES
+   AddTwoInts.srv
+   SetSomethink.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -81,6 +86,7 @@ find_package(catkin REQUIRED COMPONENTS
  generate_messages(
    DEPENDENCIES
    std_msgs
+   #geometry_msgs
  )
 
 ###################################
@@ -98,7 +104,7 @@ catkin_package(
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 
-	CATKIN_DEPENDS message_runtime
+	CATKIN_DEPENDS roscpp rospy std_msgs message_runtime #geometry_msgs
 )
 
 ###########

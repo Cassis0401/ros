@@ -3,6 +3,6 @@ prefix=/home/krajcovic/workspace/sources/ros/catkin_ws/install
 Name: test01
 Description: Description of test01
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/krajcovic/workspace/sources/ros/catkin_ws/install/include
 Libs: -L/home/krajcovic/workspace/sources/ros/catkin_ws/install/lib 
-Requires: 
+Requires: roscpp rospy std_msgs message_runtime
