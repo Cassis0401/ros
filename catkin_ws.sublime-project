@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"name": "ROS headers",
+			"path": "/opt/ros/indigo/include"
+		},
+		{
+			"follow_symlinks": true,
+			"name": "usr/headers",
+			"path": "/usr/include"
+		}
+	]
+}

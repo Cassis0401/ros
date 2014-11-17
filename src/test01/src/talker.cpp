@@ -37,7 +37,7 @@
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
- int main(int argc, char **argv)
+ itn main(int argc, char **argv)
  {
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
@@ -95,6 +95,7 @@
    int count = 0;
    while (ros::ok())
    {
+    // ROS_INFO("Counter: %d",count);
 // %EndTag(ROS_OK)%
     /**
      * This is a message object. You stuff it with data, and then publish it.
@@ -122,15 +123,19 @@
 // %EndTag(PUBLISH)%
 
 // %Tag(SPINONCE)%
+     ROS_INFO("spinOnce");
      ros::spinOnce();
 // %EndTag(SPINONCE)%
 
 // %Tag(RATE_SLEEP)%
+     ROS_INFO("sleep");
      loop_rate.sleep();
 // %EndTag(RATE_SLEEP)%
      ++count;
    }
 
+
+   ROS_INFO("exit");
 
    return 0;
  }
