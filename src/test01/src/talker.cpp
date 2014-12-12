@@ -37,7 +37,7 @@
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
- itn main(int argc, char **argv)
+ int main(int argc, char **argv)
  {
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
