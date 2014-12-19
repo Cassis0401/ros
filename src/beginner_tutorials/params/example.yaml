@@ -1,0 +1,20 @@
+configfile: ''
+package: beginner_tutorials
+rosdistro: 'indigo
+
+  '
+roslaunch:
+  uris: {host_dkrajcovic_monetplus_cz__45679: 'http://dkrajcovic.monetplus.cz:45679/',
+    host_dkrajcovic_monetplus_cz__58001: 'http://dkrajcovic.monetplus.cz:58001/'}
+rosversion: '1.11.9
+
+  '
+run_id: c100114a-877f-11e4-8eb7-5404a6a68c3f
+somefloat1: 3.14159
+somefloat2: 3.0
+someinteger1: 1
+someinteger2: 2
+somestring1: bar
+somestring2: '10'
+turtlesim1: {background_b: 255, background_g: 86, background_r: 69}
+wg: {childparam: a child namespace parameter}
