@@ -1,6 +1,10 @@
    <launch>
     <param name="package" value="beginner_tutorials" />
 
+    <arg name="path" default="$(find beginner_tutorials)/bagfiles" />
+    <arg name="file_1" default="my_file_1" />
+    <arg name="file_2" default="my_file_2" />
+
     <param name="somestring1" value="bar" />
     <!-- force to string instead of integer -->
     <param name="somestring2" value="10" type="str" />
@@ -31,6 +35,9 @@
       <node pkg="rqt_graph" name="rqt_graph" type="rqt_graph" />
       <node pkg="rqt_plot" name="rqt_plot" type="rqt_plot" />
     </group>
+
+    <node pkg="rosbag" type="record" name="rosbag_record_all"
+       args="-a"/>   
     
 <!--       <group ns="turtlesim2">
         <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
