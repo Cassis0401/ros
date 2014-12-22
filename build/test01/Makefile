@@ -192,34 +192,6 @@ _test01_generate_messages_check_deps_SetSomethink/fast:
 .PHONY : _test01_generate_messages_check_deps_SetSomethink/fast
 
 # Convenience name for target.
-test01/CMakeFiles/listener.dir/rule:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test01/CMakeFiles/listener.dir/rule
-.PHONY : test01/CMakeFiles/listener.dir/rule
-
-# Convenience name for target.
-listener: test01/CMakeFiles/listener.dir/rule
-.PHONY : listener
-
-# fast build rule for target.
-listener/fast:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f test01/CMakeFiles/listener.dir/build.make test01/CMakeFiles/listener.dir/build
-.PHONY : listener/fast
-
-# Convenience name for target.
-test01/CMakeFiles/talker.dir/rule:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test01/CMakeFiles/talker.dir/rule
-.PHONY : test01/CMakeFiles/talker.dir/rule
-
-# Convenience name for target.
-talker: test01/CMakeFiles/talker.dir/rule
-.PHONY : talker
-
-# fast build rule for target.
-talker/fast:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f test01/CMakeFiles/talker.dir/build.make test01/CMakeFiles/talker.dir/build
-.PHONY : talker/fast
-
-# Convenience name for target.
 test01/CMakeFiles/test01_gencpp.dir/rule:
 	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test01/CMakeFiles/test01_gencpp.dir/rule
 .PHONY : test01/CMakeFiles/test01_gencpp.dir/rule
@@ -317,54 +289,6 @@ test01_genpy/fast:
 	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f test01/CMakeFiles/test01_genpy.dir/build.make test01/CMakeFiles/test01_genpy.dir/build
 .PHONY : test01_genpy/fast
 
-src/listener.o: src/listener.cpp.o
-.PHONY : src/listener.o
-
-# target to build an object file
-src/listener.cpp.o:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f test01/CMakeFiles/listener.dir/build.make test01/CMakeFiles/listener.dir/src/listener.cpp.o
-.PHONY : src/listener.cpp.o
-
-src/listener.i: src/listener.cpp.i
-.PHONY : src/listener.i
-
-# target to preprocess a source file
-src/listener.cpp.i:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f test01/CMakeFiles/listener.dir/build.make test01/CMakeFiles/listener.dir/src/listener.cpp.i
-.PHONY : src/listener.cpp.i
-
-src/listener.s: src/listener.cpp.s
-.PHONY : src/listener.s
-
-# target to generate assembly for a file
-src/listener.cpp.s:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f test01/CMakeFiles/listener.dir/build.make test01/CMakeFiles/listener.dir/src/listener.cpp.s
-.PHONY : src/listener.cpp.s
-
-src/talker.o: src/talker.cpp.o
-.PHONY : src/talker.o
-
-# target to build an object file
-src/talker.cpp.o:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f test01/CMakeFiles/talker.dir/build.make test01/CMakeFiles/talker.dir/src/talker.cpp.o
-.PHONY : src/talker.cpp.o
-
-src/talker.i: src/talker.cpp.i
-.PHONY : src/talker.i
-
-# target to preprocess a source file
-src/talker.cpp.i:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f test01/CMakeFiles/talker.dir/build.make test01/CMakeFiles/talker.dir/src/talker.cpp.i
-.PHONY : src/talker.cpp.i
-
-src/talker.s: src/talker.cpp.s
-.PHONY : src/talker.s
-
-# target to generate assembly for a file
-src/talker.cpp.s:
-	cd /home/krajcovic/workspace/sources/ros/catkin_ws/build && $(MAKE) -f test01/CMakeFiles/talker.dir/build.make test01/CMakeFiles/talker.dir/src/talker.cpp.s
-.PHONY : src/talker.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -379,9 +303,7 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... listener"
 	@echo "... rebuild_cache"
-	@echo "... talker"
 	@echo "... test"
 	@echo "... test01_gencpp"
 	@echo "... test01_generate_messages"
@@ -390,12 +312,6 @@ help:
 	@echo "... test01_generate_messages_py"
 	@echo "... test01_genlisp"
 	@echo "... test01_genpy"
-	@echo "... src/listener.o"
-	@echo "... src/listener.i"
-	@echo "... src/listener.s"
-	@echo "... src/talker.o"
-	@echo "... src/talker.i"
-	@echo "... src/talker.s"
 .PHONY : help
 
 
