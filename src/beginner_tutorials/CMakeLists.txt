@@ -110,12 +110,16 @@ include_directories(
 # add_executable(beginner_tutorials_node src/beginner_tutorials_node.cpp)
 add_executable(talker src/talker.cpp)
 add_executable(listener src/listener.cpp)
+add_executable(add_two_ints_server src/add_two_ints_server.cpp)
+add_executable(add_two_ints_client src/add_two_ints_client.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(beginner_tutorials_node beginner_tutorials_generate_messages_cpp)
 add_dependencies(talker ${catkin_EXPORTED_TARGETS})
 add_dependencies(listener ${catkin_EXPORTED_TARGETS})
+add_dependencies(add_two_ints_server ${catkin_EXPORTED_TARGETS})
+add_dependencies(add_two_ints_client ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(beginner_tutorials_node
@@ -125,10 +129,16 @@ add_dependencies(listener ${catkin_EXPORTED_TARGETS})
 target_link_libraries(talker
   ${catkin_LIBRARIES}
 )
-
 target_link_libraries(listener
   ${catkin_LIBRARIES}
 )
+target_link_libraries(add_two_ints_server
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(add_two_ints_client
+  ${catkin_LIBRARIES}
+)
+
 
 #############
 ## Install ##
