@@ -14,6 +14,10 @@
 			"follow_symlinks": true,
 			"name": "usr/headers",
 			"path": "/usr/include"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/krajcovic/workspace/sources/ros/Learning_ROS_for_Robotics_Programming"
 		}
 	]
 }

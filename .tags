@@ -32,16 +32,12 @@ ARCHITECTURE_ID	build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	3
 ARCHITECTURE_ID	build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	313;"	d	file:
 AddTwoInts	devel/include/beginner_tutorials/AddTwoInts.h	/^struct AddTwoInts$/;"	s	namespace:beginner_tutorials
 AddTwoInts	devel/include/test01/AddTwoInts.h	/^struct AddTwoInts$/;"	s	namespace:test01
-AddTwoInts	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^class AddTwoInts(object):$/;"	c
-AddTwoInts	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^class AddTwoInts(object):$/;"	c
 AddTwoInts-request	devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp	/^(cl:defclass AddTwoInts-request (<AddTwoInts-request>)$/;"	f
 AddTwoInts-request	devel/share/common-lisp/ros/test01/srv/AddTwoInts.lisp	/^(cl:defclass AddTwoInts-request (<AddTwoInts-request>)$/;"	f
 AddTwoInts-response	devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp	/^(cl:defclass AddTwoInts-response (<AddTwoInts-response>)$/;"	f
 AddTwoInts-response	devel/share/common-lisp/ros/test01/srv/AddTwoInts.lisp	/^(cl:defclass AddTwoInts-response (<AddTwoInts-response>)$/;"	f
 AddTwoIntsRequest	devel/include/beginner_tutorials/AddTwoIntsRequest.h	/^typedef ::beginner_tutorials::AddTwoIntsRequest_<std::allocator<void> > AddTwoIntsRequest;$/;"	t	namespace:beginner_tutorials
 AddTwoIntsRequest	devel/include/test01/AddTwoIntsRequest.h	/^typedef ::test01::AddTwoIntsRequest_<std::allocator<void> > AddTwoIntsRequest;$/;"	t	namespace:test01
-AddTwoIntsRequest	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^class AddTwoIntsRequest(genpy.Message):$/;"	c
-AddTwoIntsRequest	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^class AddTwoIntsRequest(genpy.Message):$/;"	c
 AddTwoIntsRequestConstPtr	devel/include/beginner_tutorials/AddTwoIntsRequest.h	/^typedef boost::shared_ptr< ::beginner_tutorials::AddTwoIntsRequest const> AddTwoIntsRequestConstPtr;$/;"	t	namespace:beginner_tutorials
 AddTwoIntsRequestConstPtr	devel/include/test01/AddTwoIntsRequest.h	/^typedef boost::shared_ptr< ::test01::AddTwoIntsRequest const> AddTwoIntsRequestConstPtr;$/;"	t	namespace:test01
 AddTwoIntsRequestPtr	devel/include/beginner_tutorials/AddTwoIntsRequest.h	/^typedef boost::shared_ptr< ::beginner_tutorials::AddTwoIntsRequest > AddTwoIntsRequestPtr;$/;"	t	namespace:beginner_tutorials
@@ -54,8 +50,6 @@ AddTwoIntsRequest_	devel/include/test01/AddTwoIntsRequest.h	/^  AddTwoIntsReques
 AddTwoIntsRequest_	devel/include/test01/AddTwoIntsRequest.h	/^struct AddTwoIntsRequest_$/;"	s	namespace:test01
 AddTwoIntsResponse	devel/include/beginner_tutorials/AddTwoIntsResponse.h	/^typedef ::beginner_tutorials::AddTwoIntsResponse_<std::allocator<void> > AddTwoIntsResponse;$/;"	t	namespace:beginner_tutorials
 AddTwoIntsResponse	devel/include/test01/AddTwoIntsResponse.h	/^typedef ::test01::AddTwoIntsResponse_<std::allocator<void> > AddTwoIntsResponse;$/;"	t	namespace:test01
-AddTwoIntsResponse	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^class AddTwoIntsResponse(genpy.Message):$/;"	c
-AddTwoIntsResponse	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^class AddTwoIntsResponse(genpy.Message):$/;"	c
 AddTwoIntsResponseConstPtr	devel/include/beginner_tutorials/AddTwoIntsResponse.h	/^typedef boost::shared_ptr< ::beginner_tutorials::AddTwoIntsResponse const> AddTwoIntsResponseConstPtr;$/;"	t	namespace:beginner_tutorials
 AddTwoIntsResponseConstPtr	devel/include/test01/AddTwoIntsResponse.h	/^typedef boost::shared_ptr< ::test01::AddTwoIntsResponse const> AddTwoIntsResponseConstPtr;$/;"	t	namespace:test01
 AddTwoIntsResponsePtr	devel/include/beginner_tutorials/AddTwoIntsResponse.h	/^typedef boost::shared_ptr< ::beginner_tutorials::AddTwoIntsResponse > AddTwoIntsResponsePtr;$/;"	t	namespace:beginner_tutorials
@@ -387,8 +381,6 @@ MD5Sum	devel/include/test01/SetSomethinkRequest.h	/^struct MD5Sum< ::test01::Set
 MD5Sum	devel/include/test01/SetSomethinkResponse.h	/^struct MD5Sum< ::test01::SetSomethinkResponse_<ContainerAllocator> >$/;"	s	namespace:ros::message_traits
 Num	devel/include/beginner_tutorials/Num.h	/^typedef ::beginner_tutorials::Num_<std::allocator<void> > Num;$/;"	t	namespace:beginner_tutorials
 Num	devel/include/test01/Num.h	/^typedef ::test01::Num_<std::allocator<void> > Num;$/;"	t	namespace:test01
-Num	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^class Num(genpy.Message):$/;"	c
-Num	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^class Num(genpy.Message):$/;"	c
 Num	devel/share/common-lisp/ros/beginner_tutorials/msg/Num.lisp	/^(cl:defclass Num (<Num>)$/;"	f
 Num	devel/share/common-lisp/ros/test01/msg/Num.lisp	/^(cl:defclass Num (<Num>)$/;"	f
 NumConstPtr	devel/include/beginner_tutorials/Num.h	/^typedef boost::shared_ptr< ::beginner_tutorials::Num const> NumConstPtr;$/;"	t	namespace:beginner_tutorials
@@ -477,8 +469,6 @@ PROJECT_VERSION	build/beginner_tutorials/catkin_generated/pkg.develspace.context
 PROJECT_VERSION	build/beginner_tutorials/catkin_generated/pkg.installspace.context.pc.py	/^PROJECT_VERSION = "0.0.0"$/;"	v
 PROJECT_VERSION	build/test01/catkin_generated/pkg.develspace.context.pc.py	/^PROJECT_VERSION = "0.0.0"$/;"	v
 PROJECT_VERSION	build/test01/catkin_generated/pkg.installspace.context.pc.py	/^PROJECT_VERSION = "0.0.0"$/;"	v
-PYTHON_EXECUTABLE	build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py	/^PYTHON_EXECUTABLE = "\/usr\/bin\/python"$/;"	v
-PYTHON_EXECUTABLE	build/test01/cmake/test01-genmsg-context.py	/^PYTHON_EXECUTABLE = "\/usr\/bin\/python"$/;"	v
 Printer	devel/include/beginner_tutorials/AddTwoIntsRequest.h	/^struct Printer< ::beginner_tutorials::AddTwoIntsRequest_<ContainerAllocator> >$/;"	s	namespace:ros::message_operations
 Printer	devel/include/beginner_tutorials/AddTwoIntsResponse.h	/^struct Printer< ::beginner_tutorials::AddTwoIntsResponse_<ContainerAllocator> >$/;"	s	namespace:ros::message_operations
 Printer	devel/include/beginner_tutorials/Num.h	/^struct Printer< ::beginner_tutorials::Num_<ContainerAllocator> >$/;"	s	namespace:ros::message_operations
@@ -536,18 +526,15 @@ Serializer	devel/include/test01/Num.h	/^  template<class ContainerAllocator> str
 Serializer	devel/include/test01/SetSomethinkRequest.h	/^  template<class ContainerAllocator> struct Serializer< ::test01::SetSomethinkRequest_<ContainerAllocator> >$/;"	s	namespace:ros::serialization
 Serializer	devel/include/test01/SetSomethinkResponse.h	/^  template<class ContainerAllocator> struct Serializer< ::test01::SetSomethinkResponse_<ContainerAllocator> >$/;"	s	namespace:ros::serialization
 SetSomethink	devel/include/test01/SetSomethink.h	/^struct SetSomethink$/;"	s	namespace:test01
-SetSomethink	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^class SetSomethink(object):$/;"	c
 SetSomethink-request	devel/share/common-lisp/ros/test01/srv/SetSomethink.lisp	/^(cl:defclass SetSomethink-request (<SetSomethink-request>)$/;"	f
 SetSomethink-response	devel/share/common-lisp/ros/test01/srv/SetSomethink.lisp	/^(cl:defclass SetSomethink-response (<SetSomethink-response>)$/;"	f
 SetSomethinkRequest	devel/include/test01/SetSomethinkRequest.h	/^typedef ::test01::SetSomethinkRequest_<std::allocator<void> > SetSomethinkRequest;$/;"	t	namespace:test01
-SetSomethinkRequest	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^class SetSomethinkRequest(genpy.Message):$/;"	c
 SetSomethinkRequestConstPtr	devel/include/test01/SetSomethinkRequest.h	/^typedef boost::shared_ptr< ::test01::SetSomethinkRequest const> SetSomethinkRequestConstPtr;$/;"	t	namespace:test01
 SetSomethinkRequestPtr	devel/include/test01/SetSomethinkRequest.h	/^typedef boost::shared_ptr< ::test01::SetSomethinkRequest > SetSomethinkRequestPtr;$/;"	t	namespace:test01
 SetSomethinkRequest_	devel/include/test01/SetSomethinkRequest.h	/^  SetSomethinkRequest_()$/;"	f	struct:test01::SetSomethinkRequest_
 SetSomethinkRequest_	devel/include/test01/SetSomethinkRequest.h	/^  SetSomethinkRequest_(const ContainerAllocator& _alloc)$/;"	f	struct:test01::SetSomethinkRequest_
 SetSomethinkRequest_	devel/include/test01/SetSomethinkRequest.h	/^struct SetSomethinkRequest_$/;"	s	namespace:test01
 SetSomethinkResponse	devel/include/test01/SetSomethinkResponse.h	/^typedef ::test01::SetSomethinkResponse_<std::allocator<void> > SetSomethinkResponse;$/;"	t	namespace:test01
-SetSomethinkResponse	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^class SetSomethinkResponse(genpy.Message):$/;"	c
 SetSomethinkResponseConstPtr	devel/include/test01/SetSomethinkResponse.h	/^typedef boost::shared_ptr< ::test01::SetSomethinkResponse const> SetSomethinkResponseConstPtr;$/;"	t	namespace:test01
 SetSomethinkResponsePtr	devel/include/test01/SetSomethinkResponse.h	/^typedef boost::shared_ptr< ::test01::SetSomethinkResponse > SetSomethinkResponsePtr;$/;"	t	namespace:test01
 SetSomethinkResponse_	devel/include/test01/SetSomethinkResponse.h	/^  SetSomethinkResponse_()$/;"	f	struct:test01::SetSomethinkResponse_
@@ -573,19 +560,6 @@ Type	devel/include/test01/SetSomethinkResponse.h	/^  typedef SetSomethinkRespons
 _A_type	devel/include/test01/SetSomethinkRequest.h	/^   typedef int64_t _A_type;$/;"	t	struct:test01::SetSomethinkRequest_
 _B_type	devel/include/test01/SetSomethinkRequest.h	/^   typedef int64_t _B_type;$/;"	t	struct:test01::SetSomethinkRequest_
 _Sum_type	devel/include/test01/SetSomethinkResponse.h	/^   typedef int64_t _Sum_type;$/;"	t	struct:test01::SetSomethinkResponse_
-__init__	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  def __init__(self, *args, **kwds):$/;"	f
-__init__	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  def __init__(self, *args, **kwds):$/;"	f
-__init__	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  def __init__(self, *args, **kwds):$/;"	f
-__init__	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  def __init__(self, *args, **kwds):$/;"	f
-__init__	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  def __init__(self, *args, **kwds):$/;"	f
-__slots__	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  __slots__ = ['num','first_name','last_name','age','score']$/;"	v
-__slots__	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  __slots__ = ['a','b']$/;"	v
-__slots__	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  __slots__ = ['sum']$/;"	v
-__slots__	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  __slots__ = ['num','first_name','last_name','age','score']$/;"	v
-__slots__	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  __slots__ = ['a','b']$/;"	v
-__slots__	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  __slots__ = ['sum']$/;"	v
-__slots__	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  __slots__ = ['A','B']$/;"	v
-__slots__	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  __slots__ = ['Sum']$/;"	v
 _a_type	devel/include/beginner_tutorials/AddTwoIntsRequest.h	/^   typedef int64_t _a_type;$/;"	t	struct:beginner_tutorials::AddTwoIntsRequest_
 _a_type	devel/include/test01/AddTwoIntsRequest.h	/^   typedef int64_t _a_type;$/;"	t	struct:test01::AddTwoIntsRequest_
 _age_type	devel/include/beginner_tutorials/Num.h	/^   typedef uint8_t _age_type;$/;"	t	struct:beginner_tutorials::Num_
@@ -598,35 +572,11 @@ _catkin_make_isolated	devel/etc/catkin/profile.d/05.catkin_make_isolated.bash	/^
 _catkin_make_isolated	install/etc/catkin/profile.d/05.catkin_make_isolated.bash	/^function _catkin_make_isolated()$/;"	f
 _first_name_type	devel/include/beginner_tutorials/Num.h	/^   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _first_name_type;$/;"	t	struct:beginner_tutorials::Num_
 _first_name_type	devel/include/test01/Num.h	/^   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _first_name_type;$/;"	t	struct:test01::Num_
-_get_types	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  def _get_types(self):$/;"	f
-_get_types	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  def _get_types(self):$/;"	f
-_get_types	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  def _get_types(self):$/;"	f
-_get_types	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  def _get_types(self):$/;"	f
-_get_types	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  def _get_types(self):$/;"	f
 _get_workspaces	build/catkin_generated/installspace/_setup_util.py	/^def _get_workspaces(environ, include_fuerte=False, include_non_existing=False):$/;"	f
 _get_workspaces	devel/_setup_util.py	/^def _get_workspaces(environ, include_fuerte=False, include_non_existing=False):$/;"	f
 _get_workspaces	install/_setup_util.py	/^def _get_workspaces(environ, include_fuerte=False, include_non_existing=False):$/;"	f
-_has_header	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  _has_header = False #flag to mark the presence of a Header object$/;"	v	class:Num
-_has_header	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _has_header = False #flag to mark the presence of a Header object$/;"	v	class:AddTwoIntsRequest
-_has_header	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _has_header = False #flag to mark the presence of a Header object$/;"	v	class:AddTwoIntsResponse
-_has_header	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  _has_header = False #flag to mark the presence of a Header object$/;"	v	class:Num
-_has_header	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _has_header = False #flag to mark the presence of a Header object$/;"	v	class:AddTwoIntsRequest
-_has_header	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _has_header = False #flag to mark the presence of a Header object$/;"	v	class:AddTwoIntsResponse
-_has_header	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _has_header = False #flag to mark the presence of a Header object$/;"	v	class:SetSomethinkRequest
-_has_header	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _has_header = False #flag to mark the presence of a Header object$/;"	v	class:SetSomethinkResponse
 _last_name_type	devel/include/beginner_tutorials/Num.h	/^   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _last_name_type;$/;"	t	struct:beginner_tutorials::Num_
 _last_name_type	devel/include/test01/Num.h	/^   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _last_name_type;$/;"	t	struct:test01::Num_
-_md5sum	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  _md5sum = "379cbe21d44c48c3d9a5a30aa0ddaafb"$/;"	v	class:Num
-_md5sum	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _md5sum = "36d09b846be0b371c5f190354dd3153e"$/;"	v	class:AddTwoIntsRequest
-_md5sum	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _md5sum = "b88405221c77b1878a3cbbfff53428d7"$/;"	v	class:AddTwoIntsResponse
-_md5sum	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _md5sum = '6a2e34150c00229791cc89ff309fff21'$/;"	v	class:AddTwoInts
-_md5sum	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  _md5sum = "379cbe21d44c48c3d9a5a30aa0ddaafb"$/;"	v	class:Num
-_md5sum	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _md5sum = "36d09b846be0b371c5f190354dd3153e"$/;"	v	class:AddTwoIntsRequest
-_md5sum	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _md5sum = "b88405221c77b1878a3cbbfff53428d7"$/;"	v	class:AddTwoIntsResponse
-_md5sum	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _md5sum = '6a2e34150c00229791cc89ff309fff21'$/;"	v	class:AddTwoInts
-_md5sum	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _md5sum = "02f05bb5bde9ff0aeeed7cca0d2e13fc"$/;"	v	class:SetSomethinkRequest
-_md5sum	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _md5sum = "055d509888d173367b1b9f94491341fd"$/;"	v	class:SetSomethinkResponse
-_md5sum	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _md5sum = '713e5cf1444846805670f946f08bfc96'$/;"	v	class:SetSomethink
 _num_type	devel/include/beginner_tutorials/Num.h	/^   typedef int64_t _num_type;$/;"	t	struct:beginner_tutorials::Num_
 _num_type	devel/include/test01/Num.h	/^   typedef int64_t _num_type;$/;"	t	struct:test01::Num_
 _parse_arguments	build/catkin_generated/installspace/_setup_util.py	/^def _parse_arguments(args=None):$/;"	f
@@ -635,53 +585,13 @@ _parse_arguments	install/_setup_util.py	/^def _parse_arguments(args=None):$/;"	f
 _prefix_env_variable	build/catkin_generated/installspace/_setup_util.py	/^def _prefix_env_variable(environ, name, paths, subfolders):$/;"	f
 _prefix_env_variable	devel/_setup_util.py	/^def _prefix_env_variable(environ, name, paths, subfolders):$/;"	f
 _prefix_env_variable	install/_setup_util.py	/^def _prefix_env_variable(environ, name, paths, subfolders):$/;"	f
-_request_class	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _request_class  = AddTwoIntsRequest$/;"	v	class:AddTwoInts
-_request_class	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _request_class  = AddTwoIntsRequest$/;"	v	class:AddTwoInts
-_request_class	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _request_class  = SetSomethinkRequest$/;"	v	class:SetSomethink
-_response_class	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _response_class = AddTwoIntsResponse$/;"	v	class:AddTwoInts
-_response_class	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _response_class = AddTwoIntsResponse$/;"	v	class:AddTwoInts
-_response_class	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _response_class = SetSomethinkResponse$/;"	v	class:SetSomethink
 _rollback_env_variable	build/catkin_generated/installspace/_setup_util.py	/^def _rollback_env_variable(environ, name, subfolder):$/;"	f
 _rollback_env_variable	devel/_setup_util.py	/^def _rollback_env_variable(environ, name, subfolder):$/;"	f
 _rollback_env_variable	install/_setup_util.py	/^def _rollback_env_variable(environ, name, subfolder):$/;"	f
 _score_type	devel/include/beginner_tutorials/Num.h	/^   typedef uint32_t _score_type;$/;"	t	struct:beginner_tutorials::Num_
 _score_type	devel/include/test01/Num.h	/^   typedef uint32_t _score_type;$/;"	t	struct:test01::Num_
-_slot_types	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  _slot_types = ['int64','string','string','uint8','uint32']$/;"	v
-_slot_types	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _slot_types = ['int64','int64']$/;"	v
-_slot_types	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _slot_types = ['int64']$/;"	v
-_slot_types	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  _slot_types = ['int64','string','string','uint8','uint32']$/;"	v
-_slot_types	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _slot_types = ['int64','int64']$/;"	v
-_slot_types	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _slot_types = ['int64']$/;"	v
-_slot_types	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _slot_types = ['int64','int64']$/;"	v
-_slot_types	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _slot_types = ['int64']$/;"	v
-_struct_2q	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^_struct_2q = struct.Struct("<2q")$/;"	v
-_struct_2q	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^_struct_2q = struct.Struct("<2q")$/;"	v
-_struct_2q	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^_struct_2q = struct.Struct("<2q")$/;"	v
-_struct_BI	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^_struct_BI = struct.Struct("<BI")$/;"	v
-_struct_BI	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^_struct_BI = struct.Struct("<BI")$/;"	v
-_struct_I	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^_struct_I = genpy.struct_I$/;"	v
-_struct_I	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^_struct_I = genpy.struct_I$/;"	v
-_struct_I	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^_struct_I = genpy.struct_I$/;"	v
-_struct_I	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^_struct_I = genpy.struct_I$/;"	v
-_struct_I	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^_struct_I = genpy.struct_I$/;"	v
-_struct_q	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^_struct_q = struct.Struct("<q")$/;"	v
-_struct_q	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^_struct_q = struct.Struct("<q")$/;"	v
-_struct_q	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^_struct_q = struct.Struct("<q")$/;"	v
-_struct_q	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^_struct_q = struct.Struct("<q")$/;"	v
-_struct_q	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^_struct_q = struct.Struct("<q")$/;"	v
 _sum_type	devel/include/beginner_tutorials/AddTwoIntsResponse.h	/^   typedef int64_t _sum_type;$/;"	t	struct:beginner_tutorials::AddTwoIntsResponse_
 _sum_type	devel/include/test01/AddTwoIntsResponse.h	/^   typedef int64_t _sum_type;$/;"	t	struct:test01::AddTwoIntsResponse_
-_type	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  _type = "beginner_tutorials\/Num"$/;"	v	class:Num
-_type	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _type          = 'beginner_tutorials\/AddTwoInts'$/;"	v	class:AddTwoInts
-_type	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _type = "beginner_tutorials\/AddTwoIntsRequest"$/;"	v	class:AddTwoIntsRequest
-_type	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  _type = "beginner_tutorials\/AddTwoIntsResponse"$/;"	v	class:AddTwoIntsResponse
-_type	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  _type = "test01\/Num"$/;"	v	class:Num
-_type	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _type          = 'test01\/AddTwoInts'$/;"	v	class:AddTwoInts
-_type	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _type = "test01\/AddTwoIntsRequest"$/;"	v	class:AddTwoIntsRequest
-_type	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  _type = "test01\/AddTwoIntsResponse"$/;"	v	class:AddTwoIntsResponse
-_type	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _type          = 'test01\/SetSomethink'$/;"	v	class:SetSomethink
-_type	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _type = "test01\/SetSomethinkRequest"$/;"	v	class:SetSomethinkRequest
-_type	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  _type = "test01\/SetSomethinkResponse"$/;"	v	class:SetSomethinkResponse
 a	devel/include/beginner_tutorials/AddTwoIntsRequest.h	/^  _a_type a;$/;"	m	struct:beginner_tutorials::AddTwoIntsRequest_
 a	devel/include/test01/AddTwoIntsRequest.h	/^  _a_type a;$/;"	m	struct:test01::AddTwoIntsRequest_
 a-val	devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp	/^(cl:defmethod a-val ((m <AddTwoInts-request>))$/;"	f
@@ -733,20 +643,6 @@ code	build/catkin_generated/generate_cached_setup.py	/^code = generate_environme
 comment	build/catkin_generated/installspace/_setup_util.py	/^def comment(msg):$/;"	f
 comment	devel/_setup_util.py	/^def comment(msg):$/;"	f
 comment	install/_setup_util.py	/^def comment(msg):$/;"	f
-dep_include_paths_str	build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py	/^dep_include_paths_str = "beginner_tutorials;\/home\/krajcovic\/workspace\/sources\/ros\/catkin_ws\/src\/beginner_tutorials\/msg;std_msgs;\/opt\/ros\/indigo\/share\/std_msgs\/cmake\/..\/msg"$/;"	v
-dep_include_paths_str	build/test01/cmake/test01-genmsg-context.py	/^dep_include_paths_str = "test01;\/home\/krajcovic\/workspace\/sources\/ros\/catkin_ws\/src\/test01\/msg;std_msgs;\/opt\/ros\/indigo\/share\/std_msgs\/cmake\/..\/msg"$/;"	v
-dependencies_str	build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py	/^dependencies_str = "std_msgs"$/;"	v
-dependencies_str	build/test01/cmake/test01-genmsg-context.py	/^dependencies_str = "std_msgs"$/;"	v
-deserialize	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  def deserialize(self, str):$/;"	f
-deserialize	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  def deserialize(self, str):$/;"	f
-deserialize	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  def deserialize(self, str):$/;"	f
-deserialize	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  def deserialize(self, str):$/;"	f
-deserialize	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  def deserialize(self, str):$/;"	f
-deserialize_numpy	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  def deserialize_numpy(self, str, numpy):$/;"	f
-deserialize_numpy	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  def deserialize_numpy(self, str, numpy):$/;"	f
-deserialize_numpy	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  def deserialize_numpy(self, str, numpy):$/;"	f
-deserialize_numpy	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  def deserialize_numpy(self, str, numpy):$/;"	f
-deserialize_numpy	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  def deserialize_numpy(self, str, numpy):$/;"	f
 environ	build/catkin_generated/installspace/_setup_util.py	/^        environ = dict(os.environ)$/;"	v
 environ	devel/_setup_util.py	/^        environ = dict(os.environ)$/;"	v
 environ	install/_setup_util.py	/^        environ = dict(os.environ)$/;"	v
@@ -757,8 +653,6 @@ first_name	devel/include/beginner_tutorials/Num.h	/^  _first_name_type first_nam
 first_name	devel/include/test01/Num.h	/^  _first_name_type first_name;$/;"	m	struct:test01::Num_
 first_name-val	devel/share/common-lisp/ros/beginner_tutorials/msg/Num.lisp	/^(cl:defmethod first_name-val ((m <Num>))$/;"	f
 first_name-val	devel/share/common-lisp/ros/test01/msg/Num.lisp	/^(cl:defmethod first_name-val ((m <Num>))$/;"	f
-genmsg_check_deps_script	build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py	/^genmsg_check_deps_script = "\/opt\/ros\/indigo\/share\/genmsg\/cmake\/..\/..\/..\/lib\/genmsg\/genmsg_check_deps.py"$/;"	v
-genmsg_check_deps_script	build/test01/cmake/test01-genmsg-context.py	/^genmsg_check_deps_script = "\/opt\/ros\/indigo\/share\/genmsg\/cmake\/..\/..\/..\/lib\/genmsg\/genmsg_check_deps.py"$/;"	v
 info_arch	build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_arch	build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_compiler	build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
@@ -767,8 +661,6 @@ info_platform	build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	/^char co
 info_platform	build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
 info_version	build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
 info_version	build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
-langs	build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py	/^langs = "gencpp;genlisp;genpy"$/;"	v
-langs	build/test01/cmake/test01-genmsg-context.py	/^langs = "gencpp;genlisp;genpy"$/;"	v
 last_name	devel/include/beginner_tutorials/Num.h	/^  _last_name_type last_name;$/;"	m	struct:beginner_tutorials::Num_
 last_name	devel/include/test01/Num.h	/^  _last_name_type last_name;$/;"	m	struct:test01::Num_
 last_name-val	devel/share/common-lisp/ros/beginner_tutorials/msg/Num.lisp	/^(cl:defmethod last_name-val ((m <Num>))$/;"	f
@@ -779,7 +671,8 @@ lines	install/_setup_util.py	/^        lines = []$/;"	v
 main	build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
 main	build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
-main	src/beginner_tutorials/src/add_two_ints_server.cpp	/^int main(int argc, char const *argv[])$/;"	f
+main	src/beginner_tutorials/src/add_two_ints_client.cpp	/^int main(int argc, char **argv)$/;"	f
+main	src/beginner_tutorials/src/add_two_ints_server.cpp	/^int main(int argc, char **argv)$/;"	f
 main	src/beginner_tutorials/src/listener.cpp	/^int main(int argc, char **argv)$/;"	f
 main	src/beginner_tutorials/src/talker.cpp	/^ int main(int argc, char **argv)$/;"	f
 main	src/test01/src/listener.cpp	/^int main(int argc, char **argv)$/;"	f
@@ -800,8 +693,6 @@ message_traits	devel/include/test01/AddTwoIntsResponse.h	/^namespace message_tra
 message_traits	devel/include/test01/Num.h	/^namespace message_traits$/;"	n	namespace:ros
 message_traits	devel/include/test01/SetSomethinkRequest.h	/^namespace message_traits$/;"	n	namespace:ros
 message_traits	devel/include/test01/SetSomethinkResponse.h	/^namespace message_traits$/;"	n	namespace:ros
-messages_str	build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py	/^messages_str = "\/home\/krajcovic\/workspace\/sources\/ros\/catkin_ws\/src\/beginner_tutorials\/msg\/Num.msg"$/;"	v
-messages_str	build/test01/cmake/test01-genmsg-context.py	/^messages_str = "\/home\/krajcovic\/workspace\/sources\/ros\/catkin_ws\/src\/test01\/msg\/Num.msg"$/;"	v
 mode	build/catkin_generated/generate_cached_setup.py	/^mode = os.stat(output_filename).st_mode$/;"	v
 num	devel/include/beginner_tutorials/Num.h	/^  _num_type num;$/;"	m	struct:beginner_tutorials::Num_
 num	devel/include/test01/Num.h	/^  _num_type num;$/;"	m	struct:test01::Num_
@@ -816,19 +707,12 @@ operator <<	devel/include/test01/Num.h	/^std::ostream& operator<<(std::ostream& 
 operator <<	devel/include/test01/SetSomethinkRequest.h	/^std::ostream& operator<<(std::ostream& s, const ::test01::SetSomethinkRequest_<ContainerAllocator> & v)$/;"	f	namespace:test01
 operator <<	devel/include/test01/SetSomethinkResponse.h	/^std::ostream& operator<<(std::ostream& s, const ::test01::SetSomethinkResponse_<ContainerAllocator> & v)$/;"	f	namespace:test01
 output_filename	build/catkin_generated/generate_cached_setup.py	/^output_filename = '\/home\/krajcovic\/workspace\/sources\/ros\/catkin_ws\/build\/catkin_generated\/setup_cached.sh'$/;"	v
-pkg_name	build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py	/^pkg_name = "beginner_tutorials"$/;"	v
-pkg_name	build/test01/cmake/test01-genmsg-context.py	/^pkg_name = "test01"$/;"	v
 prepend	build/catkin_generated/installspace/_setup_util.py	/^def prepend(environ, key, prefix):$/;"	f
 prepend	devel/_setup_util.py	/^def prepend(environ, key, prefix):$/;"	f
 prepend	install/_setup_util.py	/^def prepend(environ, key, prefix):$/;"	f
 prepend_env_variables	build/catkin_generated/installspace/_setup_util.py	/^def prepend_env_variables(environ, env_var_subfolders, workspaces):$/;"	f
 prepend_env_variables	devel/_setup_util.py	/^def prepend_env_variables(environ, env_var_subfolders, workspaces):$/;"	f
 prepend_env_variables	install/_setup_util.py	/^def prepend_env_variables(environ, env_var_subfolders, workspaces):$/;"	f
-python3	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^python3 = True if sys.hexversion > 0x03000000 else False$/;"	v
-python3	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^python3 = True if sys.hexversion > 0x03000000 else False$/;"	v
-python3	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^python3 = True if sys.hexversion > 0x03000000 else False$/;"	v
-python3	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^python3 = True if sys.hexversion > 0x03000000 else False$/;"	v
-python3	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^python3 = True if sys.hexversion > 0x03000000 else False$/;"	v
 python_path	build/catkin_generated/generate_cached_setup.py	/^        python_path = os.path.join(workspace, 'lib\/python2.7\/dist-packages')$/;"	v
 request	devel/include/beginner_tutorials/AddTwoInts.h	/^Request request;$/;"	m	struct:beginner_tutorials::AddTwoInts
 request	devel/include/test01/AddTwoInts.h	/^Request request;$/;"	m	struct:test01::AddTwoInts
@@ -951,21 +835,9 @@ serialization	devel/include/test01/AddTwoIntsResponse.h	/^namespace serializatio
 serialization	devel/include/test01/Num.h	/^namespace serialization$/;"	n	namespace:ros
 serialization	devel/include/test01/SetSomethinkRequest.h	/^namespace serialization$/;"	n	namespace:ros
 serialization	devel/include/test01/SetSomethinkResponse.h	/^namespace serialization$/;"	n	namespace:ros
-serialize	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  def serialize(self, buff):$/;"	f
-serialize	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  def serialize(self, buff):$/;"	f
-serialize	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  def serialize(self, buff):$/;"	f
-serialize	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  def serialize(self, buff):$/;"	f
-serialize	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  def serialize(self, buff):$/;"	f
-serialize_numpy	devel/lib/python2.7/dist-packages/beginner_tutorials/msg/_Num.py	/^  def serialize_numpy(self, buff, numpy):$/;"	f
-serialize_numpy	devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py	/^  def serialize_numpy(self, buff, numpy):$/;"	f
-serialize_numpy	devel/lib/python2.7/dist-packages/test01/msg/_Num.py	/^  def serialize_numpy(self, buff, numpy):$/;"	f
-serialize_numpy	devel/lib/python2.7/dist-packages/test01/srv/_AddTwoInts.py	/^  def serialize_numpy(self, buff, numpy):$/;"	f
-serialize_numpy	devel/lib/python2.7/dist-packages/test01/srv/_SetSomethink.py	/^  def serialize_numpy(self, buff, numpy):$/;"	f
 service_traits	devel/include/beginner_tutorials/AddTwoInts.h	/^namespace service_traits$/;"	n	namespace:ros
 service_traits	devel/include/test01/AddTwoInts.h	/^namespace service_traits$/;"	n	namespace:ros
 service_traits	devel/include/test01/SetSomethink.h	/^namespace service_traits$/;"	n	namespace:ros
-services_str	build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py	/^services_str = "\/home\/krajcovic\/workspace\/sources\/ros\/catkin_ws\/src\/beginner_tutorials\/srv\/AddTwoInts.srv"$/;"	v
-services_str	build/test01/cmake/test01-genmsg-context.py	/^services_str = "\/home\/krajcovic\/workspace\/sources\/ros\/catkin_ws\/src\/test01\/srv\/AddTwoInts.srv;\/home\/krajcovic\/workspace\/sources\/ros\/catkin_ws\/src\/test01\/srv\/SetSomethink.srv"$/;"	v
 source_root_dir	build/catkin_generated/order_packages.py	/^source_root_dir = "\/home\/krajcovic\/workspace\/sources\/ros\/catkin_ws\/src"$/;"	v
 static_value1	devel/include/beginner_tutorials/AddTwoIntsRequest.h	/^  static const uint64_t static_value1 = 0x36d09b846be0b371ULL;$/;"	m	struct:ros::message_traits::MD5Sum
 static_value1	devel/include/beginner_tutorials/AddTwoIntsResponse.h	/^  static const uint64_t static_value1 = 0xb88405221c77b187ULL;$/;"	m	struct:ros::message_traits::MD5Sum
