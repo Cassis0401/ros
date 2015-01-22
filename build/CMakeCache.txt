@@ -275,6 +275,9 @@ genmsg_DIR:PATH=/opt/ros/indigo/share/genmsg/cmake
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
 
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
+
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/krajcovic/workspace/sources/ros/catkin_ws/build/gtest
 
@@ -338,6 +341,15 @@ test01_BINARY_DIR:STATIC=/home/krajcovic/workspace/sources/ros/catkin_ws/build/t
 
 //Value Computed by CMake
 test01_SOURCE_DIR:STATIC=/home/krajcovic/workspace/sources/ros/catkin_ws/src/test01
+
+//Value Computed by CMake
+using_markers_BINARY_DIR:STATIC=/home/krajcovic/workspace/sources/ros/catkin_ws/build/using_markers
+
+//Value Computed by CMake
+using_markers_SOURCE_DIR:STATIC=/home/krajcovic/workspace/sources/ros/catkin_ws/src/using_markers
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/indigo/share/visualization_msgs/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
@@ -444,7 +456,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=4
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

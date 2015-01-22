@@ -8,6 +8,8 @@ source devel/setup.bash
 
 # Check dependesies for test01
 rospack depends1 test01
+rospack depends1 beginner_tutorials
+rospack depends1 using_markers
 
 # make eclipse-project
 #catkin_make --force-cmake -G"Eclipse CDT4 - Unix Makefiles"
