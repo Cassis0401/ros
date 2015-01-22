@@ -34,10 +34,12 @@
       <node pkg="turtlesim" name="teleop_key" type="turtle_teleop_key" />
       <node pkg="rqt_graph" name="rqt_graph" type="rqt_graph" />
       <node pkg="rqt_plot" name="rqt_plot" type="rqt_plot" />
+
+      <node pkg="rosbag" type="play" name="player" output="screen" args="$(find beginner_tutorials)/bagfiles/turtle/2015-01-22-10-12-07.bag"/>
     </group>
 
-    <node pkg="rosbag" type="record" name="rosbag_record_all"
-       args="-a"/>   
+ <!--    <node pkg="rosbag" type="record" name="rosbag_record_all"
+       args="-a"/>    -->
     
 <!--       <group ns="turtlesim2">
         <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
