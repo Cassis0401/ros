@@ -12,4 +12,7 @@
     <node pkg="learning_tf" type="turtle_tf_broadcaster"
           args="/turtle2" name="turtle2_tf_broadcaster" />
 
+    <node pkg="learning_tf" type="turtle_tf_listener"
+          name="listener" />
+
   </launch>
