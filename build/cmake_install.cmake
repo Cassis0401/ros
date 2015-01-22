@@ -127,6 +127,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/krajcovic/workspace/sources/ros/catkin_ws/build/gtest/cmake_install.cmake")
   INCLUDE("/home/krajcovic/workspace/sources/ros/catkin_ws/build/beginner_tutorials/cmake_install.cmake")
   INCLUDE("/home/krajcovic/workspace/sources/ros/catkin_ws/build/test01/cmake_install.cmake")
+  INCLUDE("/home/krajcovic/workspace/sources/ros/catkin_ws/build/learning_tf/cmake_install.cmake")
   INCLUDE("/home/krajcovic/workspace/sources/ros/catkin_ws/build/using_markers/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)

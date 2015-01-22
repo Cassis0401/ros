@@ -1,2 +1,2 @@
-beginner_tutorials:test01:using_markers
+beginner_tutorials:learning_tf:test01:using_markers
 -DCATKIN_DEVEL_PREFIX=/home/krajcovic/workspace/sources/ros/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/krajcovic/workspace/sources/ros/catkin_ws/install -G Unix Makefiles

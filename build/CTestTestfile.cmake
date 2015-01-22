@@ -7,4 +7,5 @@
 SUBDIRS(gtest)
 SUBDIRS(beginner_tutorials)
 SUBDIRS(test01)
+SUBDIRS(learning_tf)
 SUBDIRS(using_markers)

@@ -10,6 +10,7 @@ source devel/setup.bash
 rospack depends1 test01
 rospack depends1 beginner_tutorials
 rospack depends1 using_markers
+rospack depends1 learning_tf
 
 # make eclipse-project
 #catkin_make --force-cmake -G"Eclipse CDT4 - Unix Makefiles"
