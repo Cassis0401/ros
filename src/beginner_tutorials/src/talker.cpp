@@ -84,7 +84,9 @@
 // %EndTag(PUBLISHER)%
 
 // %Tag(LOOP_RATE)%
-   ros::Rate loop_rate(10);
+   int loopRate = 0;
+   n.param("loopRate", loopRate, 10);
+   ros::Rate loop_rate(loopRate);
 // %EndTag(LOOP_RATE)%
 
   /**

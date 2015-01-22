@@ -3,6 +3,26 @@
 	{
 		"selected_items":
 		[
+			[
+				"begin",
+				"beginner_tutorials"
+			],
+			[
+				"add_two_in",
+				"add_two_ints_server"
+			],
+			[
+				"add_t",
+				"add_two_ints_client"
+			],
+			[
+				"add_two_int",
+				"add_two_ints_client"
+			],
+			[
+				"add_two",
+				"add_two_ints_server"
+			]
 		]
 	},
 	"buffers":
@@ -40,22 +60,6 @@
 			}
 		},
 		{
-			"file": "src/CMakeLists.txt",
-			"settings":
-			{
-				"buffer_size": 2057,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/test01/CMakeLists.txt",
-			"settings":
-			{
-				"buffer_size": 5871,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": ".gitignore",
 			"settings":
 			{
@@ -65,10 +69,7 @@
 			}
 		},
 		{
-			"contents": "/*\n * Copyright (C) 2008, Morgan Quigley and Willow Garage, Inc.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *   * Redistributions of source code must retain the above copyright notice,\n *     this list of conditions and the following disclaimer.\n *   * Redistributions in binary form must reproduce the above copyright\n *     notice, this list of conditions and the following disclaimer in the\n *     documentation and/or other materials provided with the distribution.\n *   * Neither the names of Stanford University or Willow Garage, Inc. nor the names of its\n *     contributors may be used to endorse or promote products derived from\n *     this software without specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE\n * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\n * POSSIBILITY OF SUCH DAMAGE.\n */\n// %Tag(FULLTEXT)%\n// %Tag(ROS_HEADER)%\n#include \"ros/ros.h\"\n// %EndTag(ROS_HEADER)%\n// %Tag(MSG_HEADER)%\n#include \"std_msgs/String.h\"\n// %EndTag(MSG_HEADER)%\n\n#include <sstream>\n\n/**\n * This tutorial demonstrates simple sending of messages over the ROS system.\n */\n itn main(int argc, char **argv)\n {\n  /**\n   * The ros::init() function needs to see argc and argv so that it can perform\n   * any ROS arguments and name remapping that were provided at the command line. For programmatic\n   * remappings you can use a different version of init() which takes remappings\n   * directly, but for most command-line programs, passing argc and argv is the easiest\n   * way to do it.  The third argument to init() is the name of the node.\n   *\n   * You must call one of the versions of ros::init() before using any other\n   * part of the ROS system.\n   */\n// %Tag(INIT)%\n   ros::init(argc, argv, \"talker\");\n// %EndTag(INIT)%\n\n  /**\n   * NodeHandle is the main access point to communications with the ROS system.\n   * The first NodeHandle constructed will fully initialize this node, and the last\n   * NodeHandle destructed will close down the node.\n   */\n// %Tag(NODEHANDLE)%\n   ros::NodeHandle n;\n// %EndTag(NODEHANDLE)%\n\n  /**\n   * The advertise() function is how you tell ROS that you want to\n   * publish on a given topic name. This invokes a call to the ROS\n   * master node, which keeps a registry of who is publishing and who\n   * is subscribing. After this advertise() call is made, the master\n   * node will notify anyone who is trying to subscribe to this topic name,\n   * and they will in turn negotiate a peer-to-peer connection with this\n   * node.  advertise() returns a Publisher object which allows you to\n   * publish messages on that topic through a call to publish().  Once\n   * all copies of the returned Publisher object are destroyed, the topic\n   * will be automatically unadvertised.\n   *\n   * The second parameter to advertise() is the size of the message queue\n   * used for publishing messages.  If messages are published more quickly\n   * than we can send them, the number here specifies how many messages to\n   * buffer up before throwing some away.\n   */\n// %Tag(PUBLISHER)%\n   ros::Publisher chatter_pub = n.advertise<std_msgs::String>(\"chatter\", 1000);\n// %EndTag(PUBLISHER)%\n\n// %Tag(LOOP_RATE)%\n   ros::Rate loop_rate(10);\n// %EndTag(LOOP_RATE)%\n\n  /**\n   * A count of how many messages we have sent. This is used to create\n   * a unique string for each message.\n   */\n// %Tag(ROS_OK)%\n   int count = 0;\n   while (ros::ok())\n   {\n    // ROS_INFO(\"Counter: %d\",count);\n// %EndTag(ROS_OK)%\n    /**\n     * This is a message object. You stuff it with data, and then publish it.\n     */\n// %Tag(FILL_MESSAGE)%\n     std_msgs::String msg;\n\n     std::stringstream ss;\n     ss << \"hello world \" << count;\n     msg.data = ss.str();\n// %EndTag(FILL_MESSAGE)%\n\n// %Tag(ROSCONSOLE)%\n     ROS_INFO(\"%s\", msg.data.c_str());\n// %EndTag(ROSCONSOLE)%\n\n    /**\n     * The publish() function is how you send messages. The parameter\n     * is the message object. The type of this object must agree with the type\n     * given as a template parameter to the advertise<>() call, as was done\n     * in the constructor above.\n     */\n// %Tag(PUBLISH)%\n     chatter_pub.publish(msg);\n// %EndTag(PUBLISH)%\n\n// %Tag(SPINONCE)%\n     ROS_INFO(\"spinOnce\");\n     ros::spinOnce();\n// %EndTag(SPINONCE)%\n\n// %Tag(RATE_SLEEP)%\n     ROS_INFO(\"sleep\");\n     loop_rate.sleep();\n// %EndTag(RATE_SLEEP)%\n     ++count;\n   }\n\n\n   ROS_INFO(\"exit\");\n\n   return 0;\n }\n// %EndTag(FULLTEXT)%",
 			"file": "src/test01/src/talker.cpp",
-			"file_size": 5175,
-			"file_write_time": 130607356059620080,
 			"settings":
 			{
 				"buffer_size": 5175,
@@ -100,6 +101,24 @@
 			}
 		},
 		{
+			"file": "make.sh",
+			"settings":
+			{
+				"buffer_size": 107,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.0 Release Notes\n  \n  \n  **** Windows Sublime Text 3 Users ****\n  \n  Due to a bug in Package Control 2.0, Windows ST3 users will need to open the\n  Sublime Text console (ctrl+`) and execute the following Python to properly\n  upgrade. All other users may ignore this part of the message.\n  \n  Make sure NOT to copy the leading two spaces, or an \"unexpected indent\" error\n  will occur.\n  \n  import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')\n  \n  ********\n  \n  \n  Package Control 3.0 adds a bunch of polish, improving the Sublime Text\n  experience for users and package developers:\n  \n   - improved upgrades of themes, color schemes and syntaxes\n   - dependency support\n   - SSL for Linux\n   - new secondary Windows HTTP backend\n   - patches for Python in Sublime Text 2 on Windows\n   - commands to easily remove channels and repositories\n   - an events API for packages\n   - improved documentation\n  \n  \n  As of July 2014, I now work for myself. This has allowed me to spend more time\n  working on open source software, including Package Control. If you appreciate\n  the work I've done, please consider a small donation. If even 5% of regular\n  users donated the price of a coffee or beer, that would cover quite a bit of\n  my development time! See https://packagecontrol.io/about for options.\n  \n  \n  Some recent Package Control stats:\n  \n   - every weekday over 1M JSON requests hit the channel server\n   - in December, the channel server will transmit 4TB+ of compressed JSON\n   - users have installed, upgraded or removed 85M+ packages since late 2011\n  \n  \n  Read more about the release at:\n  \n  https://packagecontrol.io/news#2014-12-23-Package_Control_30_Released\n  \n",
+			"settings":
+			{
+				"buffer_size": 2331,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		},
+		{
 			"file": "/opt/ros/indigo/include/Stage-4.1/stage.hh",
 			"settings":
 			{
@@ -120,6 +139,54 @@
 			"settings":
 			{
 				"buffer_size": 65341,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/beginner_tutorials/src/add_two_ints_server.cpp",
+			"settings":
+			{
+				"buffer_size": 586,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/beginner_tutorials/launch/simservice.launch",
+			"settings":
+			{
+				"buffer_size": 796,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/beginner_tutorials/src/talker.cpp",
+			"settings":
+			{
+				"buffer_size": 5246,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/beginner_tutorials/launch/turtle.launch",
+			"settings":
+			{
+				"buffer_size": 2192,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/beginner_tutorials/src/add_two_ints_client.cpp",
+			"settings":
+			{
+				"buffer_size": 659,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/beginner_tutorials/CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 6063,
 				"line_ending": "Unix"
 			}
 		},
@@ -154,9 +221,45 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 117.0,
+		"height": 96.0,
 		"selected_items":
 		[
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"xmls",
+				"Set Syntax: HTML (ASP)"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"make",
+				"Set Syntax: Makefile"
+			],
+			[
+				"cmake",
+				"Set Syntax: CMake"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -227,10 +330,27 @@
 	},
 	"expanded_folders":
 	[
-		"/home/krajcovic/workspace/sources/ros/catkin_ws"
+		"/home/krajcovic/workspace/sources/ros/catkin_ws",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/src",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/src/beginner_tutorials",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/src/beginner_tutorials/bagfiles",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/src/beginner_tutorials/launch",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/src/beginner_tutorials/src"
 	],
 	"file_history":
 	[
+		"/home/krajcovic/Downloads/mvta_crash.tg",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/src/test01/CMakeLists.txt",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/src/beginner_tutorials/CMakeLists.txt",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/src/CMakeLists.txt",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/build/CMakeCache.txt",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/build/catkin_make.cache",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/build/CATKIN_IGNORE",
+		"/usr/include/boost/python/object/add_to_namespace.hpp",
+		"/home/krajcovic/workspace/sources/ros/catkin_ws/src/beginner_tutorials/src/add_two_ints_server.cpp",
+		"/opt/ros/indigo/include/rviz/add_display_dialog.h",
+		"/opt/ros/indigo/include/actionlib/action_definition.h",
+		"/opt/ros/indigo/include/angles/angles.h",
 		"/opt/ros/indigo/include/rviz/loading_dialog.h",
 		"/opt/ros/indigo/include/nodelet/loader.h",
 		"/opt/ros/indigo/include/ros/ros.h",
@@ -249,9 +369,6 @@
 		"/home/krajcovic/workspace/sources/ros/catkin_ws/build/catkin_generated/stamps/Project/interrogate_setup_dot_py.py.stamp",
 		"/home/krajcovic/workspace/sources/ros/catkin_ws/build/catkin_generated/order_packages.cmake",
 		"/home/krajcovic/workspace/sources/ros/catkin_ws/build/beginner_tutorials/catkin_generated/ordered_paths.cmake",
-		"/home/krajcovic/workspace/sources/ros/catkin_ws/src/CMakeLists.txt",
-		"/home/krajcovic/workspace/sources/ros/catkin_ws/build/catkin_make.cache",
-		"/home/krajcovic/workspace/sources/ros/catkin_ws/build/CATKIN_IGNORE",
 		"/home/krajcovic/workspace/sources/ros/catkin_ws/setup_env.sh",
 		"/home/krajcovic/workspace/sources/ros/catkin_ws/devel/etc/catkin/profile.d/05.catkin_make_isolated.bash",
 		"/home/krajcovic/workspace/sources/ros/catkin_ws/build/Makefile",
@@ -282,6 +399,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ROS_BUILD_TYPE",
+			"\" ",
 			"NodeHandle",
 			"/ros.h",
 			"ros.h",
@@ -310,7 +429,7 @@
 	"groups":
 	[
 		{
-			"selected": 13,
+			"selected": 10,
 			"sheets":
 			[
 				{
@@ -339,7 +458,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -368,7 +487,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
@@ -397,7 +516,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -432,64 +551,6 @@
 				},
 				{
 					"buffer": 4,
-					"file": "src/CMakeLists.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2057,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CMake/CMake.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 255.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/test01/CMakeLists.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5871,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5611,
-								5611
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CMake/CMake.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2068.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": ".gitignore",
 					"semi_transient": false,
 					"settings":
@@ -513,11 +574,11 @@
 						"translation.y": 357.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 5,
 					"file": "src/test01/src/talker.cpp",
 					"semi_transient": false,
 					"settings":
@@ -648,11 +709,11 @@
 						"translation.y": 1224.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 6,
 					"file": "devel/lib/test01/talker",
 					"semi_transient": false,
 					"settings":
@@ -676,11 +737,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 7,
 					"file": "gen_ctags.sh",
 					"semi_transient": false,
 					"settings":
@@ -704,11 +765,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 8,
 					"file": "setup_env.sh",
 					"semi_transient": false,
 					"settings":
@@ -732,7 +793,63 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "make.sh",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2331,
+								2331
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -762,7 +879,7 @@
 						"translation.y": 816.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -888,13 +1005,14 @@
 							},
 							"codeintel_tooltips": "popup",
 							"sublime_auto_complete": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -923,11 +1041,189 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 14,
+					"file": "src/beginner_tutorials/src/add_two_ints_server.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 586,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								369,
+								369
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "src/beginner_tutorials/launch/simservice.launch",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "src/beginner_tutorials/src/talker.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3947,
+								3947
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 816.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "src/beginner_tutorials/launch/turtle.launch",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								385,
+								385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "src/beginner_tutorials/src/add_two_ints_client.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								645,
+								645
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "src/beginner_tutorials/CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6063,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
 					"file": "src/test01/src/listener.cpp",
 					"semi_transient": false,
 					"settings":
@@ -954,11 +1250,11 @@
 						"translation.y": 838.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 21,
 					"file": "src/test01/launch/turtlemimic.launch",
 					"semi_transient": false,
 					"settings":
@@ -984,11 +1280,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 22,
 					"file": "params.yaml",
 					"semi_transient": false,
 					"settings":
@@ -1012,7 +1308,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 21,
 					"type": "text"
 				}
 			]
@@ -1057,6 +1353,10 @@
 	{
 		"height": 0.0
 	},
+	"output.git":
+	{
+		"height": 112.0
+	},
 	"output.mvn_exec":
 	{
 		"height": 357.0
@@ -1072,6 +1372,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"cmakelist",
+				"catkin_ws/src/beginner_tutorials/CMakeLists.txt"
+			],
+			[
+				"add_tow",
+				"catkin_ws/src/beginner_tutorials/src/add_two_ints_server.cpp"
+			],
 			[
 				"ldap.h",
 				"usr/headers/ldap.h"
