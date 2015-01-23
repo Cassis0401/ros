@@ -1,11 +1,14 @@
   <launch>
     <param name="node_name" value="learning_tf" />
 
+
+    <!-- <param name="robot_description" command="cat $(find gazebo)/model.xml" /> -->
+
     <!-- Turtlesim Node-->
     <node pkg="turtlesim" type="turtlesim_node" name="sim"/> 
     <node pkg="rviz" name="rviz_sim" type="rviz" args="-d $(find learning_tf)/rviz/start_demo.rviz"/>
 
-    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen"/>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop" output="screen" launch-prefix="xterm -e"/>
     <!-- Axes -->
     <param name="scale_linear" value="2" type="double"/>
     <param name="scale_angular" value="2" type="double"/>
