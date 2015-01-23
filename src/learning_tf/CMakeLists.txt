@@ -9,7 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   tf
   turtlesim
-  message_generation
+#  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
