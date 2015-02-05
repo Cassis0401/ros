@@ -26,11 +26,20 @@ int main(int argc, char** argv){
     try{
       // listener.lookupTransform("/turtle2", "/carrot1",
       //                          ros::Time(0), transform);
+      // ros::Time now = ros::Time::now();
+      // listener.waitForTransform("/turtle2", "/turtle1",
+      //                           now, ros::Duration(3.0));
+      // listener.lookupTransform("/turtle2", "/turtle1",
+      //                          now, transform);
+
       ros::Time now = ros::Time::now();
-      listener.waitForTransform("/turtle2", "/turtle1",
-                                now, ros::Duration(3.0));
-      listener.lookupTransform("/turtle2", "/turtle1",
-                               now, transform);
+      ros::Time past = now - ros::Duration(0.0);
+      listener.waitForTransform("/turtle2", now,
+                              "/turtle1", past,
+                              "/world", ros::Duration(1.0));
+      listener.lookupTransform("/turtle2", now,
+                             "/turtle1", past,
+                             "/world", transform);
     }
     catch (tf::TransformException &ex) {
       ROS_ERROR("%s",ex.what());
@@ -47,6 +56,10 @@ int main(int argc, char** argv){
     //                               pow(transform.getOrigin().y(), 2)),2);
     vel_msg.linear.x = 0.5 * (sqrt(pow(transform.getOrigin().x(), 2) +
                                   pow(transform.getOrigin().y(), 2)));
+    if(vel_msg.linear.x < 1.0) {
+      vel_msg.linear.x *= -1;
+    }
+
     ROS_INFO("linear.z: [%f]", vel_msg.linear.x);
     
     turtle_vel.publish(vel_msg);
